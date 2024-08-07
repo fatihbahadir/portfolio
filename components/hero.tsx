@@ -8,8 +8,7 @@ import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 import Buttons from "./buttons";
 import { useRouter } from 'next/navigation'
-import * as NProgress from "nprogress";
-
+import NProgress from 'nprogress';
 
 const Hero = () => {
   const text = "FATIH BAHADIR";
