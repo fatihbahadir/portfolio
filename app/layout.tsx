@@ -40,8 +40,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-main-bg mx-auto`}>
-        <div className="absolute dot inset-0 h-full w-full bg-transparent z-[-1] bg-[radial-gradient(circle,#272727_1px,transparent_1px,transparent_16px)] [background-size:32px_32px]"></div>  
+      <body className={`${manrope.className} bg-main-bg mx-auto relative`}>
+        <div className="absolute dot inset-0 min-h-screen w-full z-[-1] bg-[radial-gradient(circle,#272727_1px,transparent_1px,transparent_16px)] [background-size:32px_32px]"></div>  
         <Navbar />
         <NextTopLoader
           color="#D3E97A"

@@ -49,7 +49,7 @@ const Hero = () => {
           />
       </div>
 
-      <div className="w-full h-[280px] sm:h-[500px] lg:w-[550px] lg:h-[530px] 2xl:w-[500px] 2xl:h-[550px]">
+      <div className="w-full h-[280px] sm:h-[500px] lg:w-[550px] lg:h-[530px] 2xl:w-[550px] 2xl:h-[570px]">
         <Image
           src="/home.JPG"
           width={400}

@@ -12,6 +12,14 @@ const config: Config = {
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
         "spotlight": 'spotlight 4s ease-in-out infinite',
       },
+      // gap: {
+      //   '7': "1.75rem",
+      //   '8': "2rem",
+      //   '9': "2.25rem",
+      //   '10': "2.5rem",
+      //   '11': "2.75rem",
+      //   '12': "3rem"
+      // },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
