@@ -8,7 +8,8 @@ import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 import Buttons from "./buttons";
 import { useRouter } from 'next/navigation'
-import NProgress from 'nprogress';
+import NProgress from "nprogress";
+
 
 const Hero = () => {
   const text = "FATIH BAHADIR";
@@ -48,11 +49,11 @@ const Hero = () => {
           />
       </div>
 
-      <div className="w-full h-[280px] sm:h-[500px] lg:w-[550px] lg:h-[530px] 2xl:w-[600px] 2xl:h-[700px]">
+      <div className="w-full h-[280px] sm:h-[500px] lg:w-[550px] lg:h-[530px] 2xl:w-[500px] 2xl:h-[550px]">
         <Image
           src="/home.JPG"
-          width={500}
-          height={600}
+          width={400}
+          height={500}
           alt="profile image"
           className="rounded-2xl brightness-125 hover:grayscale transition duration-300 ease-in-out hover:rotate-6 rotate-0 object-cover w-full h-full"
         />
