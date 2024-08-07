@@ -79,8 +79,9 @@ const Navbar = () => {
               isOpen ? "flex flex-col " : "hidden"
             }`}
           >
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item, index) => (
               <Link
+                key={index}
                 className={`${
                   isActiveLink(item.href) && "text-white underline decoration-primary underline-offset-4"
                 } hover:text-white hover:underline underline-offset-4 transition-all`}
