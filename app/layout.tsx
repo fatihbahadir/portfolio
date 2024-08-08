@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fatih Bahadır - Portfolio",
     description: "Personal Website of Fatih Bahadır",
-    url: "https://portfolio-hazel-delta-50.vercel.app/", 
+    url: "https:/www.f-bahadir.com/", 
     siteName: "Fatih Bahadır - Portfolio",
     images: [
       {
-        url: "https://portfolio-hazel-delta-50.vercel.app/_next/image?url=%2Fhome.JPG&w=640&q=75", 
+        url: "https://www.f-bahadir.com/_next/image?url=%2Fhome.JPG&w=640&q=75", 
         width: 1200,
         height: 630,
       },
