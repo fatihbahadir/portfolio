@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fatih Bahadır - Portfolio",
     description: "Personal Website of Fatih Bahadır",
-    url: "https:/www.f-bahadir.com/", 
+    url: "https://www.f-bahadir.com", 
     siteName: "Fatih Bahadır - Portfolio",
     images: [
       {
