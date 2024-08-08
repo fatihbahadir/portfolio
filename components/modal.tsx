@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FaXmark, FaDownload } from "react-icons/fa6";
 
 const Modal = ({
   active,
+  children,
   closeModal,
 }: {
   active: boolean;
+  children: ReactNode 
   closeModal: () => void;
 }) => {
   const ref = useRef<Element | null>(null);
@@ -35,21 +37,12 @@ const Modal = ({
     }
   };
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = './cvnew.pdf'; // Update the path to your PDF file
-    link.download = 'cvnew.pdf'; // The name of the file to be downloaded
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   if (!mounted || !ref.current) return null;
 
   return createPortal(
     <div
       onClick={handleBackdropClick}
-      className={`fixed left-0 top-0 flex h-screen w-screen items-center justify-center transition-all duration-300 bg-main-bg bg-opacity-50 ${
+      className={`fixed left-0 top-0 flex h-screen w-screen items-center justify-center transition-all duration-300 bg-main-bg bg-opacity-60 z-[12] ${
         active ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >
@@ -66,22 +59,8 @@ const Modal = ({
           <FaXmark className="w-[15px] h-[15px]" />
         </button>
 
-        <div className="w-full h-full hidden sm:block">
-          <iframe
-            style={{ overflow: "hidden" }}
-            className="w-full h-full"
-            src="./cvnew.pdf"
-          />
-        </div>
-        <div className="flex flex-col items-center justify-center text-off-white sm:hidden">
-          <p>Ooops! It seems your browser does not support pdf viewer. Please download it with the button below.</p>
-          <button 
-            onClick={handleDownload}
-            className="flex items-center justify-center gap-3 bg-primary rounded-[30px] py-2 mt-3 px-3 text-black font-semibold cursor-pointer"
-          >
-            <FaDownload /> Download
-          </button>
-        </div>
+        {children}
+        
       </div>
     </div>,
     ref.current
