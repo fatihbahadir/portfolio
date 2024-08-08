@@ -43,7 +43,7 @@ const Hero = () => {
 
         <Buttons text="Contact Me" onClick={()=>{
           NProgress.start();
-          router.push('/about');
+          router.push('/contact');
           }}
           Icon={BsArrowUpRight}
           />

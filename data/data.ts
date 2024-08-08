@@ -1,3 +1,6 @@
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/fatihbahadir/';
+export const GITHUB_URL = 'https://github.com/fatihbahadir';
+
 export const NAV_ITEMS = [
     {
         href: '/',
@@ -15,7 +18,7 @@ export const NAV_ITEMS = [
         href: '/contact',
         name: 'Contact'  
     }
-]
+];
 
 export const EDUCATION = [
   {
@@ -30,7 +33,7 @@ export const EDUCATION = [
     date: '2016 - 2020',
     description: 'I graduated from numerical department in high school. Developed a strong interest to mathematics and web programming.'
   },
-]
+];
 
 export const EXPERINCE = [
   {
@@ -45,7 +48,7 @@ export const EXPERINCE = [
     firm: 'JotForm',
     date: 'July 2024 - August 2024',
     description: 'Completed an internship where I developed a live chat application for a no-code app builder using React, Redux, and Redux Saga. Also worked on side projects.'  },
-]
+];
 
 
 
@@ -100,4 +103,4 @@ export const EXPERIENCE_ITEMS = [
       "NoSQL Databases"
     ]
   },
-]
+];

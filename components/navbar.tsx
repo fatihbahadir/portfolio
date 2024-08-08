@@ -50,9 +50,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${bebas_neue.className} sticky top-0 z-10 text-off-white`}
+      className={`${bebas_neue.className} sticky top-0 z-10 text-off-white ${scrolling && 'bg-main-bg lg:bg-transparent' } `}
     >
-      <div className={`${scrolling && 'absolute inset-0 bg-main-bg bg-opacity-50 backdrop-blur-lg z-[-1]' }`}></div>
+      <div className={`${scrolling && 'lg:absolute lg:inset-0 lg:bg-main-bg lg:bg-opacity-50 lg:backdrop-blur-lg lg:z-[-1]' }`}></div>
       <div className="max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem] mx-auto px-4">
         <div className="flex items-center justify-between py-6">
           <Link href={"/"}>
@@ -93,7 +93,7 @@ const Navbar = () => {
         </div>
 
         <div
-   className={`text-off-white z-20 bg-main-bg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-80 space-y-3 text-lg lg:hidden fixed top-0 right-0 h-screen w-full transition-transform duration-300 transform ${
+   className={`text-off-white z-20 bg-main-bg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-lg lg:bg-opacity-80 space-y-3 text-lg lg:hidden fixed top-0 right-0 h-screen w-full transition-transform duration-300 transform ${
      isOpen ? "translate-x-0" : "translate-x-full"
    }`}
 >
