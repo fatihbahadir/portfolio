@@ -11,16 +11,18 @@ const AboutMain = ({
   rightSection,
   gap,
   first,
+  last
 }: {
   title: string;
   rightSection: ReactNode;
   gap: string;
   first?: boolean;
+  last?: boolean;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.1 1"],
+    offset: ["0 1", "1 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
@@ -42,18 +44,22 @@ const AboutMain = ({
           <h2
             className={`${bebas_neue.className} uppercase ${
               first
-                ? " lg:text-[90px] xl:text-[101px]"
-                : "lg:text-[55px] xl:text-[76px]"
-            } text-6xl leading-[90%] `}
+                ? " text-[57px] lg:text-[90px] xl:text-[101px]"
+                : "text-[43px] lg:text-[55px] xl:text-[76px]"
+            }  leading-[90%] `}
           >
             {title}
           </h2>
 
-          <div className={`flex flex-col ${gap} max-w-[700px]`}>
+          <div className={`flex flex-col ${gap} max-w-[600px] xl:max-w-[700px]`}>
             {rightSection}
           </div>
         </div>
-        <div className="absolute w-screen bottom-0 h-[1px] bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)]"></div>
+        {
+          !last &&
+          <div className="absolute w-screen bottom-0 h-[1px] bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)]"></div>
+
+        }
       </section>
     </motion.div>
   );

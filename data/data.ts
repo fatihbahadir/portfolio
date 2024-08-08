@@ -46,3 +46,58 @@ export const EXPERINCE = [
     date: 'July 2024 - August 2024',
     description: 'Completed an internship where I developed a live chat application for a no-code app builder using React, Redux, and Redux Saga. Also worked on side projects.'  },
 ]
+
+
+
+export const EXPERIENCE_ITEMS = [
+  {
+    title: "Experience with",
+    description: 'Hands-on experience with these technologies and tools, used in various projects and tasks to deliver effective solutions.',
+    items: [
+      "Figma",
+      "Firebase",
+      "Reach Router",
+      "Spring Boot",
+      "C",
+      "C# .NET",
+      "Selenium",
+      "Tkinter",
+      "Vercel"
+    ]
+  },
+  {
+    title: "Years of ex with",
+    description: 'Extensive experience gained over the years with these technologies, allowing for efficient and robust development practices.',
+    items: [
+      "Axios",
+      "Fetch API",
+      "React Context",
+      "React Router",
+      "JavaScript",
+      "NodeJS",
+      "Git",
+      "GitHub",
+      "ExpressJS",
+      "Python",
+      "NextJS"
+    ]
+  },
+  {
+    title: "Work and study",
+    description: 'In-depth work and study with these technologies, enhancing both practical skills and theoretical understanding for comprehensive development.',
+    items: [
+      "React.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind",
+      "Bootstrap",
+      "Styled Components",
+      "Redux",
+      "Redux Saga",
+      "TypeScript",
+      "API RESTful",
+      "PostgreSQL",
+      "NoSQL Databases"
+    ]
+  },
+]

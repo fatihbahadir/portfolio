@@ -16,7 +16,7 @@ const Hero = () => {
   const router = useRouter()
 
   return (
-    <section className="max-w-screen h-screen flex lg:flex-row flex-col items-center lg:justify-between lg:-mt-[110px]  gap-6 lg:gap-0">
+    <section className="max-w-screen h-screen flex lg:flex-row flex-col items-center lg:justify-between lg:-mt-[120px]  gap-6 lg:gap-0">
       <div className="flex flex-col text-start justify-center">
         <h1
           className={`${bebas_neue.className} lg:text-[90px] xl:text-[101px] text-6xl leading-[90%] `}
