@@ -20,10 +20,10 @@ const AboutMain = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "1.1 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
 
   return (
     <motion.div
@@ -53,7 +53,7 @@ const AboutMain = ({
             {rightSection}
           </div>
         </div>
-        <div className="absolute w-screen bottom-0 border-b border-[#484848]"></div>
+        <div className="absolute w-screen bottom-0 h-[1px] bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)]"></div>
       </section>
     </motion.div>
   );
