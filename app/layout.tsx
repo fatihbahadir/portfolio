@@ -12,18 +12,18 @@ export const metadata: Metadata = {
   },
   description: "Personal Website of Fatih Bahadır",
   icons: {
-    icon: "/favicon/favicon.ico",
-    shortcut: "/favicon/favicon.ico", // change this
-    apple: "/favicon/favicon.ico", // change this
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png", 
+    apple: "apple-touch-icon.png", 
   },
   openGraph: {
     title: "Fatih Bahadır - Portfolio",
     description: "Personal Website of Fatih Bahadır",
-    url: "", // change this
+    url: "https://portfolio-hazel-delta-50.vercel.app/", 
     siteName: "Fatih Bahadır - Portfolio",
     images: [
       {
-        url: "", // change this
+        url: "https://portfolio-hazel-delta-50.vercel.app/_next/image?url=%2Fhome.JPG&w=640&q=75", 
         width: 1200,
         height: 630,
       },
