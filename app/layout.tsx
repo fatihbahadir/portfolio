@@ -56,6 +56,7 @@ export default function RootLayout({
         <main className="flex flex-col mx-auto max-w-[61rem] xl:max-w-[77rem] 2xl:max-w-[93rem] justify-center px-4 pt-5 text-white">
           {children}
         </main>
+        <div id="modal"/>
       </body>
     </html>
   );

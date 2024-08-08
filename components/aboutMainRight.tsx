@@ -1,9 +1,19 @@
 "use client";
-import React from 'react'
+import React, { useState } from 'react'
 import Buttons from './buttons';
 import { FaExpand } from 'react-icons/fa';
+import Modal from './modal';
 
 const AboutMainRight = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const openModal = () => {
+    setIsActive(true);
+  }
+
+  const closeModal = () => {
+    setIsActive(false);
+  }
   return (
     <>
     <h5 className="text-[20px] lg:text-2xl xl:text-3xl font-[500] leading-[140%]">
@@ -22,11 +32,14 @@ const AboutMainRight = () => {
      <Buttons
        text="SEE RESUME"
        onClick={() => {
-         console.log("hello world");
+         setIsActive(true)
        }}
        Icon={FaExpand}
      />
    </div>
+   <Modal active={isActive} closeModal={closeModal}>
+
+   </Modal>
    </>  )
 }
 
