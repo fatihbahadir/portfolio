@@ -10,7 +10,7 @@ const AboutExperience = ({firm, title, date, description} : {firm?: string, titl
         {
             firm &&
             <div className='-mt-2 text-primary text-lg font-semibold leading-[160%]'>
-                Jotform
+                {firm}
             </div>
         }
         <div className='text-lg leading-[150%] text-off-white font-[300]'>
