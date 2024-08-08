@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${bebas_neue.className} sticky top-0 ${scrolling && 'z-10 bg-main-bg backdrop-filter backdrop-blur-lg bg-opacity-10' }  text-off-white`}
+      className={`${bebas_neue.className} sticky top-0 z-10 ${scrolling && ' bg-main-bg backdrop-filter backdrop-blur-lg bg-opacity-10' }  text-off-white`}
     >
       <div className="max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem] mx-auto px-4">
         <div className="flex items-center justify-between py-6 relative">
@@ -93,7 +93,7 @@ const Navbar = () => {
           </div>
       </div>
       {(scrolling) && (
-        <div className="bg-gradient-to-r from-[rgba(211,233,122,0)] via-primary to-[rgba(211,233,122,0)] h-[1px]" />
+        <div className="bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)] h-[1px]" />
       )}
     </nav>
   );

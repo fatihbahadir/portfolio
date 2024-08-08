@@ -6,11 +6,11 @@ import { FaExpand } from 'react-icons/fa';
 const AboutMainRight = () => {
   return (
     <>
-    <h5 className="text-3xl font-[500] leading-[140%]">
+    <h5 className="text-[20px] lg:text-2xl xl:text-3xl font-[500] leading-[140%]">
      I am a front-end developer based in Istanbul, Currently 4th-year
      Software Engineering student
    </h5>
-   <p className="text-lg text-off-white leading-[150%] font-light">
+   <p className="text-[16px] lg:text-[17px] xl:text-lg text-off-white leading-[150%] font-light">
      I&apos;m currently a fourth-year Software Enginering student at Maltepe
      University in Istanbul, where I&apos;m diving into the world of Fullstack
      Development. When I was a child, I used to lose track of time while
