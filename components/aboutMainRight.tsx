@@ -3,18 +3,12 @@ import React, { useState } from "react";
 import Buttons from "./buttons";
 import { FaDownload, FaExpand } from "react-icons/fa";
 import Modal from "./modal";
+import { handleCvDownload } from "@/lib/utils";
 
 const AboutMainRight = () => {
   const [isActive, setIsActive] = useState(false);
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = './cvnew.pdf'; // Update the path to your PDF file
-    link.download = 'cvnew.pdf'; // The name of the file to be downloaded
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   
   const openModal = () => {
@@ -62,7 +56,7 @@ const AboutMainRight = () => {
             download it with the button below.
           </p>
           <button
-            onClick={handleDownload}
+            onClick={handleCvDownload}
             className="flex items-center justify-center gap-3 bg-primary rounded-[30px] py-2 mt-3 px-3 text-black font-semibold cursor-pointer"
           >
             <FaDownload /> Download

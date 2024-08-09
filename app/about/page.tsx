@@ -1,13 +1,11 @@
-"use client";
 import AboutExperience from "@/components/aboutExpeience";
 import AboutExRight from "@/components/aboutExRight";
 import AboutMain from "@/components/aboutMain";
 import AboutMainRight from "@/components/aboutMainRight";
 import AboutSkillRight from "@/components/aboutSkillRight";
-import Buttons from "@/components/buttons";
 import { EDUCATION, EXPERIENCE_ITEMS, EXPERINCE } from "@/data/data";
 import React from "react";
-import { FaExpand } from "react-icons/fa";
+
 
 const About = () => {
   return (

@@ -15,7 +15,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 1) {
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
     };
 
     
-    if (window.scrollY > 20) {
+    if (window.scrollY > 1) {
       setScrolling(true);
     }
 
@@ -67,11 +67,9 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center text-off-white hover:text-white transition-all"
             >
-              {isOpen ? (
-                <IoMdClose className="h-6 w-6" />
-              ) : (
+
                 <HiOutlineMenuAlt3 className="h-6 w-6" />
-              )}
+
             </button>
           </div>
 
