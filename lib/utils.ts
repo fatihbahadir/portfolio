@@ -22,3 +22,6 @@ export const handleCvDownload = async (e?: React.MouseEvent<HTMLAnchorElement | 
       console.error('Failed to download the file:', error);
     }
   };
+
+
+  export const inDevEnvironment = !!process && process.env.NODE_ENV === 'development';

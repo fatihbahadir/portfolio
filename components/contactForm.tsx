@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import InputField from "./contactInputField";
 import emailjs from "@emailjs/browser";
 import { FaCheck } from "react-icons/fa";
+import { inDevEnvironment } from "@/lib/utils";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -68,19 +69,30 @@ const ContactForm: React.FC = () => {
         subject: "",
         message: "",
       });
+    
+    let values;
 
-    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY || "");
-
+    if (inDevEnvironment) {
+        values = [process.env.NEXT_PUBLIC_PUBLIC_KEY, process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID]
+    }
+    else {
+        values = [process.env.PUBLIC_KEY, process.env.SERVICE_ID, process.env.TEMPLATE_ID]
+    }
+    
+    emailjs.init(values[0] || "");
     await emailjs.send(
-      process.env.NEXT_PUBLIC_SERVICE_ID || "",
-      process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
-      {
-        to_name: "Fatih Bahadır",
-        from_name: `${formData.email} ${formData.name}`,
-        subject: formData.subject,
-        message: formData.message,
-      }
-    );
+       values[1] || "",
+        values[2] || "",
+        {
+          to_name: "Fatih Bahadır",
+          from_name: `${formData.email} ${formData.name}`,
+          subject: formData.subject,
+          message: formData.message,
+        }
+      );
+
+
+
 
     console.log("Form submitted:", formData);
 
