@@ -8,7 +8,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const ContactLeft = () => {
   return (
-    <div className="flex items-start justify-center gap-5 flex-col">
+    <div className="flex items-start justify-center gap-2 lg:gap-5 flex-col">
       <h2
         className={`${bebas_neue.className} uppercase  text-[57px] lg:text-[90px] xl:text-[101px] leading-[90%] `}
       >
@@ -24,7 +24,7 @@ const ContactLeft = () => {
         </a>
       </p>
       <p className="text-[16px] lg:text-[17px] xl:text-lg font-[300] text-off-white leading-[150%]">
-        For more info, here's my{' '}
+        For more info, here&apos;s my{' '}
         <button
           className="text-white  underline decoration-primary underline-offset-8 ml-1 transition-all hover:tracking-wide"
           onClick={handleCvDownload}
@@ -32,10 +32,10 @@ const ContactLeft = () => {
           resume
         </button>
       </p>
-      <div className="mt-3 flex items-start justify-center gap-8">
+      <div className="mt-3 flex items-start justify-center gap-3 lg:gap-8">
         {SOCIALS.map((social, index) => (
           <a
-            className="w-[32px] h-[32px] text-primary opacity-0"
+            className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px] text-primary opacity-0"
             href={social.href}
             key={social.id}
             target="_blank"

@@ -28,3 +28,46 @@
     transform: translateY(0);
   }
 }
+
+@keyframes fadeInError {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-message {
+  animation: fadeInError 0.5s ease-in-out forwards; 
+}
+
+
+/* Genel otomatik doldurma stili */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1A1A1A inset; /* Custom background color to override the default one */
+  box-shadow: 0 0 0 1000px #1A1A1A inset; /* Custom background color to override the default one */
+  -webkit-text-fill-color: #fff; /* Set the text color if needed */
+}
+
+/* Internet Explorer ve Edge için */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #fff; /* Custom text color */
+}
+
+/* Firefox için */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  background-color: #1A1A1A !important; /* Custom background color */
+  color: #fff; /* Set the text color if needed */
+}
+
+
+/* Placeholder rengi */
+::placeholder {
+  color: #aaa; /* Custom placeholder color */
+}

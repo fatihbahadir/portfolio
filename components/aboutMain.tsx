@@ -51,9 +51,11 @@ const AboutMain = ({
             {title}
           </h2>
 
-          <div className={`flex flex-col ${gap} max-w-[600px] sm:max-w-full lg:max-w-[600px] xl:max-w-[700px]`}>
+          <div className={`flex flex-col ${gap} max-w-[600px] sm:max-w-full lg:max-w-[600px] xl:max-w-[700px] `}>
             {rightSection}
           </div>
+
+          {last && <div className="absolute left-0 bottom-5 text-off-white text-[16px]">© {new Date().getFullYear()} Muhammet Fatih Bahadır</div>}
         </div>
         {
           !last &&
