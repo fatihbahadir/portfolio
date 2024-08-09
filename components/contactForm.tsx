@@ -72,10 +72,12 @@ const ContactForm: React.FC = () => {
     
     let values;
 
-    if (inDevEnvironment) {
+    if (inDevEnvironment) {    
         values = [process.env.NEXT_PUBLIC_PUBLIC_KEY, process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID]
+        console.log(values);
     }
     else {
+        console.warn(process.env.NODE_ENV);
         values = [process.env.PUBLIC_KEY, process.env.SERVICE_ID, process.env.TEMPLATE_ID]
     }
     
