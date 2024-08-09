@@ -67,11 +67,9 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center text-off-white hover:text-white transition-all"
             >
-              {isOpen ? (
-                <IoMdClose className="h-6 w-6" />
-              ) : (
+
                 <HiOutlineMenuAlt3 className="h-6 w-6" />
-              )}
+
             </button>
           </div>
 

@@ -1,3 +1,6 @@
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/fatihbahadir/';
 export const GITHUB_URL = 'https://github.com/fatihbahadir';
 
@@ -104,3 +107,27 @@ export const EXPERIENCE_ITEMS = [
     ]
   },
 ];
+
+
+export const SOCIALS = [
+  {
+    id: 1,
+    Icon: FaLinkedinIn,
+    href: LINKEDIN_URL
+  },
+  {
+    id: 2,
+    Icon: FaGithub,
+    href: GITHUB_URL
+  },
+  {
+    id: 3,
+    Icon: FaInstagram,
+    href: 'https://www.instagram.com/marksmanofplat/' 
+  },
+  {
+    id: 4,
+    Icon: FaXTwitter,
+    href: 'https://x.com/lodylol_' 
+  },
+]

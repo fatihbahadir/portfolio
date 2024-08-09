@@ -22,7 +22,7 @@ const AboutMain = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "1.15 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
@@ -51,7 +51,7 @@ const AboutMain = ({
             {title}
           </h2>
 
-          <div className={`flex flex-col ${gap} max-w-[600px] xl:max-w-[700px]`}>
+          <div className={`flex flex-col ${gap} max-w-[600px] sm:max-w-full lg:max-w-[600px] xl:max-w-[700px]`}>
             {rightSection}
           </div>
         </div>

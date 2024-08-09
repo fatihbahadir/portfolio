@@ -29,7 +29,7 @@ const Hero = () => {
                   index > 5 && "text-primary"
                 }`}
                 key={`${char}-${index}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1 }s` }}
               >
                 {char === " " ? "\u00A0" : char}
               </span>

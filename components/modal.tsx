@@ -18,20 +18,20 @@ const Modal = ({
   useEffect(() => {
     ref.current = document.getElementById("modal");
     setMounted(true);
-  }, []); // Runs only on first render
+  }, []); 
 
   useEffect(() => {
     if (active) {
       setVisible(true);
     } else {
-      // Wait for animation duration before hiding
-      const timeout = setTimeout(() => setVisible(false), 300); // Adjust time to match animation duration
+      
+      const timeout = setTimeout(() => setVisible(false), 300); 
       return () => clearTimeout(timeout);
     }
   }, [active]);
 
   const handleBackdropClick = (e: React.MouseEvent) => {
-    // Close modal if the backdrop is clicked
+    
     if (e.target === e.currentTarget) {
       closeModal();
     }
