@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import InputField from "./contactInputField";
 import emailjs from "@emailjs/browser";
 import { FaCheck } from "react-icons/fa";
-import { inDevEnvironment } from "@/lib/utils";
+
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -77,7 +77,6 @@ const ContactForm: React.FC = () => {
       process.env.NEXT_PUBLIC_SERVICE_ID,
       process.env.NEXT_PUBLIC_TEMPLATE_ID,
     ];
-    console.log(values);
 
     emailjs.init(values[0] || "");
     await emailjs.send(values[1] || "", values[2] || "", {
@@ -87,7 +86,7 @@ const ContactForm: React.FC = () => {
       message: formData.message,
     });
 
-    console.log("Form submitted:", formData);
+    
 
     setFormData({
       name: "",
