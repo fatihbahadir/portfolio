@@ -64,37 +64,28 @@ const ContactForm: React.FC = () => {
     setLoading(true);
 
     setErrors({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
     let values;
 
-    if (inDevEnvironment) {    
-        values = [process.env.NEXT_PUBLIC_PUBLIC_KEY, process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID]
-        console.log(values);
-    }
-    else {
-        console.warn(process.env.NODE_ENV);
-        values = [process.env.PUBLIC_KEY, process.env.SERVICE_ID, process.env.TEMPLATE_ID]
-    }
-    
+    values = [
+      process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      process.env.NEXT_PUBLIC_SERVICE_ID,
+      process.env.NEXT_PUBLIC_TEMPLATE_ID,
+    ];
+    console.log(values);
+
     emailjs.init(values[0] || "");
-    await emailjs.send(
-       values[1] || "",
-        values[2] || "",
-        {
-          to_name: "Fatih Bahadır",
-          from_name: `${formData.email} ${formData.name}`,
-          subject: formData.subject,
-          message: formData.message,
-        }
-      );
-
-
-
+    await emailjs.send(values[1] || "", values[2] || "", {
+      to_name: "Fatih Bahadır",
+      from_name: `${formData.email} ${formData.name}`,
+      subject: formData.subject,
+      message: formData.message,
+    });
 
     console.log("Form submitted:", formData);
 
@@ -108,7 +99,7 @@ const ContactForm: React.FC = () => {
     setCompleted(true);
     setLoading(false);
     setTimeout(() => {
-        setCompleted(false);
+      setCompleted(false);
     }, 5000);
   };
 
@@ -126,7 +117,7 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           error={errors.name}
           label="Name"
-          disabled={(loading || completed)}
+          disabled={loading || completed}
         />
         <InputField
           id="email"
@@ -136,7 +127,7 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           error={errors.email}
           label="Email"
-          disabled={(loading || completed)}
+          disabled={loading || completed}
         />
         <InputField
           id="subject"
@@ -146,7 +137,7 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           error={errors.subject}
           label="Subject"
-          disabled={(loading || completed)}
+          disabled={loading || completed}
         />
         <InputField
           id="message"
@@ -156,12 +147,14 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           error={errors.message}
           label="Message"
-          disabled={(loading || completed)}
+          disabled={loading || completed}
         />
         <button
-          className={`${completed && 'animate-bounce transition-all'} self-start mt-1 sm:mt-3 bg-primary transition-all flex items-center justify-center w-[120px] h-[40px] uppercase text-[14px] lg:text-[16px] text-main-bg font-bold rounded-[100px]`}
+          className={`${
+            completed && "animate-bounce transition-all"
+          } self-start mt-1 sm:mt-3 bg-primary transition-all flex items-center justify-center w-[120px] h-[40px] uppercase text-[14px] lg:text-[16px] text-main-bg font-bold rounded-[100px]`}
           type="submit"
-          disabled={(loading || completed)}
+          disabled={loading || completed}
         >
           {loading ? (
             <div className="flex gap-2">
@@ -169,12 +162,12 @@ const ContactForm: React.FC = () => {
               <div className="w-3 h-3 rounded-full animate-pulse bg-main-bg"></div>
               <div className="w-3 h-3 rounded-full animate-pulse bg-main-bg"></div>
             </div>
-          ) : completed ? 
-          <div className="flex items-center justify-center gap-2 text-green-700 ">
-            <FaCheck/>
-            Sent
-          </div>
-          : (
+          ) : completed ? (
+            <div className="flex items-center justify-center gap-2 text-green-700 ">
+              <FaCheck />
+              Sent
+            </div>
+          ) : (
             "Submit"
           )}
         </button>
