@@ -37,7 +37,7 @@ const ContactInputField: React.FC<InputFieldProps> = ({ id, name, type = 'text',
           disabled={disabled}
         />
       )}
-      {error && <span className='text-primary error-message text-xs -mt-1'>{error}</span>}
+      {error && <span className='text-primary error-message text-xs'>{error}</span>}
     </div>
   );
 };
