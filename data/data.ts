@@ -131,3 +131,55 @@ export const SOCIALS = [
     href: 'https://x.com/lodylol_' 
   },
 ]
+
+
+export const PROJECT_ITEMS = [
+  {
+    id: 1,
+    Img: "/project4.png",
+    title: "Design Editor",
+    description: "This is the design editor, which I consider my biggest project. You can design almost everything. With this editor, you can create, save and download designs like Canva. Currently, I am working on adding video editing features.",
+    liveLink: "https://design-editor-ten.vercel.app/",
+    githubLink: "https://github.com/fatihbahadir/design-editor",
+    year: '2023 - Present',
+    role: 'Frontend Developer'
+  },
+  {
+    id: 2,
+    Img: "/project5.png",
+    title: "CyberSec Application",
+    description: "A cybersecurity application that includes a backend for handling data collected by keylogger and email collection scripts from victims’ computers. It supports authentication, authorization, and a frontend dashboard for managing and viewing collected data.",
+    backendGithubLink: "https://github.com/fatihbahadir/cyber-security-backend",
+    frontendGithubLink: "https://github.com/fatihbahadir/cyber-sec-frontend",
+    year: '2024',
+    role: 'Fullstack Developer'
+  },
+  {
+    id: 3,
+    Img: "/project2.png",
+    title: "Landing Page",
+    description: "This is the landing page for our YouTube automation project. I developed the landing page, I added animations with AOS, integrated email connections using EmailJS, implemented language switching with i18n, and added dark mode.",
+    liveLink: "https://webinen.com",
+    year: '2023',
+    role: 'Frontend Developer'
+  },
+  {
+    id: 4,
+    Img: "/project3.png",
+    title: "Thesis Management System",
+    description: "It is a thesis management system for our SE307 class. I developed the whole front end. This dashboard allowed us to add and delete theses, filter them by any parameter, add university, institute, related topics and subjects.",
+    githubLink: "https://github.com/fatihbahadir/dbm-thesis",
+    liveLink: "https://dbm-thesis.vercel.app",
+    year: '2024',
+    role: 'Fullstack Developer'
+  },
+  {
+    id: 5,
+    Img: "/project1.png",
+    title: "Process Monitoring",
+    description: "With my university friends, we built a system that automatically uploads videos to YouTube. I developed the dashboard. This dashboard allowed us to track uploaded videos with charts, manage accounts, add configurations, and monitor progress.",
+    liveLink: "https://monitoring.webinen.com/",
+    year: '2023',
+    role: 'Frontend Developer'
+  }
+];
