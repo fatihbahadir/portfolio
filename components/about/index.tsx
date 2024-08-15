@@ -1,7 +1,7 @@
 "use client";
 import { bebas_neue } from "@/lib/fonts";
 import React, { ReactNode, useRef } from "react";
-import Buttons from "./buttons";
+import Buttons from "@/components/buttons";
 import { FaDownload, FaExpand } from "react-icons/fa";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";

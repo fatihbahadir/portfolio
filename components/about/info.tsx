@@ -1,16 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import Buttons from "./buttons";
+import Buttons from "@/components/common/buttons";
 import { FaDownload, FaExpand } from "react-icons/fa";
-import Modal from "./modal";
+import Modal from "@/components/common/modal";
 import { handleCvDownload } from "@/lib/utils";
 
-const AboutMainRight = () => {
+const Information = () => {
   const [isActive, setIsActive] = useState(false);
 
-
-
-  
   const openModal = () => {
     setIsActive(true);
   };
@@ -67,4 +64,4 @@ const AboutMainRight = () => {
   );
 };
 
-export default AboutMainRight;
+export default Information;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutExperience = ({firm, title, date, description} : {firm?: string, title: string, date: string, description: string}) => {
+const Experience = ({firm, title, date, description} : {firm?: string, title: string, date: string, description: string}) => {
   return (
     <div className='flex flex-col gap-5'>
         <div className='flex flex-col xl:flex-row gap-2 lg:gap-0 justify-between xl:items-center'>
@@ -20,4 +20,4 @@ const AboutExperience = ({firm, title, date, description} : {firm?: string, titl
   )
 }
 
-export default AboutExperience
+export default Experience

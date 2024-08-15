@@ -1,8 +1,5 @@
 "use client";
-import { bebas_neue } from "@/lib/fonts";
-import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import React, { useRef } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 
@@ -20,7 +17,9 @@ const ProjectsMain = ({Img, title, description, liveLink, githubLink,frontendGit
 }) => {
 
   return (
-  <section className={`h-screen flex flex-col lg:flex-row items-start justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 ${first && "lg:-mt-[105px]"} py-12`}>
+  <section
+
+  className={`h-screen flex flex-col lg:flex-row items-start justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 ${first && "lg:-mt-[105px]"} py-12`}>
       <div className="bg-[#1A1A1A] rounded-[12px] w-full h-[343px] lg:w-[450px] lg:h-[450px]  xl:w-[520px] xl:h-[520px] relative">
         <Image
           className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-[300px]  h-[180px] sm:w-[500px] sm:h-[300px] md:w-[400px] md:h-[200px]  xl:w-[500px] xl:h-[260px] rounded-[12px]"

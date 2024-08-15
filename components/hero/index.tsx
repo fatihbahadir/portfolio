@@ -6,7 +6,7 @@ import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { FaArrowUpRightDots } from "react-icons/fa6";
-import Buttons from "./buttons";
+import Buttons from "@/components/common/buttons";
 import { useRouter } from 'next/navigation'
 import NProgress from "nprogress";
 

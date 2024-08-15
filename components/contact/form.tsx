@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import InputField from "./contactInputField";
+import InputField from "./inputField";
 import emailjs from "@emailjs/browser";
 import { FaCheck } from "react-icons/fa";
 
 
-const ContactForm: React.FC = () => {
+const Form: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -175,4 +175,4 @@ const ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;
+export default Form;

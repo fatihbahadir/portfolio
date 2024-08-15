@@ -1,14 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-@layer utilities {
-    .spotlight-bg {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%);
-      background-size: 400% 400%;
-      animation: spotlight 4s ease-in-out infinite;
-    }
-  } */
+
+
 
 ::-webkit-scrollbar {
     display: none;

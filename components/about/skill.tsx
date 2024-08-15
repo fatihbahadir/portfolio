@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutSkillRight = ({ data, description} : { data: string[], description: string}) => {
+const Skill = ({ data, description} : { data: string[], description: string}) => {
   return (
     <>
     <div className='text-off-white text-[16px] lg:text-[17px] xl:text-lg font-[300] leading-[150%]'>
@@ -18,4 +18,4 @@ const AboutSkillRight = ({ data, description} : { data: string[], description: s
   )
 }
 
-export default AboutSkillRight
+export default Skill

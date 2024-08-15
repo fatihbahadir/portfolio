@@ -2,11 +2,9 @@
 import { SOCIALS } from '@/data/data';
 import { bebas_neue } from '@/lib/fonts';
 import { handleCvDownload } from '@/lib/utils';
-import React from 'react';
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
 
-const ContactLeft = () => {
+
+const Information = () => {
   return (
     <div className="flex items-start justify-center gap-2 lg:gap-5 flex-col">
       <h2
@@ -52,4 +50,4 @@ const ContactLeft = () => {
   );
 };
 
-export default ContactLeft;
+export default Information;

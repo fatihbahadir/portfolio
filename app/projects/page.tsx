@@ -1,4 +1,4 @@
-import ProjectsMain from '@/components/projectsMain'
+import ProjectsMain from '@/components/projects/main';
 import { PROJECT_ITEMS } from '@/data/data'
 import React from 'react'
 
