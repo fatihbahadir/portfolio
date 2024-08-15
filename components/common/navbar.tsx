@@ -105,7 +105,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-center space-y-8">
+          <div className="flex-col-center space-y-8">
             {NAV_ITEMS.map((item, index) => (
               <Link
                 key={index}

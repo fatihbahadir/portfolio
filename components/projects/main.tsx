@@ -19,7 +19,7 @@ const ProjectsMain = ({Img, title, description, liveLink, githubLink,frontendGit
   return (
   <section
 
-  className={`h-screen flex flex-col lg:flex-row items-start justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 ${first && "lg:-mt-[105px]"} py-12`}>
+  className={`h-screen flex-mobile items-start justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 ${first && "lg:-mt-[105px]"} py-12`}>
       <div className="bg-[#1A1A1A] rounded-[12px] w-full h-[343px] lg:w-[450px] lg:h-[450px]  xl:w-[520px] xl:h-[520px] relative">
         <Image
           className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-[300px]  h-[180px] sm:w-[500px] sm:h-[300px] md:w-[400px] md:h-[200px]  xl:w-[500px] xl:h-[260px] rounded-[12px]"
@@ -29,7 +29,7 @@ const ProjectsMain = ({Img, title, description, liveLink, githubLink,frontendGit
           height={260}
         />
       </div>
-      <div className="flex flex-col items-start justify-start w-full lg:max-w-[400px] xl:max-w-[580px] gap-5">
+      <div className="flex-colum items-start justify-start w-full lg:max-w-[400px] xl:max-w-[580px] gap-5">
         <h5 className="text-[20px] lg:text-2xl xl:text-3xl leading-[140%]">
         {title}
         </h5>
@@ -37,7 +37,7 @@ const ProjectsMain = ({Img, title, description, liveLink, githubLink,frontendGit
         {description}
 
         </p>
-        <div className="w-full flex flex-col">
+        <div className="w-full flex-column">
           <h6 className="border-b border-b-[#484848] py-3 font-semibold leading-[150%] text-[16px]">
             PROJECT INFO
           </h6>

@@ -30,8 +30,6 @@ export const METADATA =  {
   },
 }
 
-export const LINKEDIN_URL = 'https://www.linkedin.com/in/fatihbahadir/';
-export const GITHUB_URL = 'https://github.com/fatihbahadir';
 
 export const NAV_ITEMS = [
     {
@@ -137,18 +135,21 @@ export const EXPERIENCE_ITEMS = [
   },
 ];
 
-
-export const SOCIALS = [
+export const HOME_SOCIALS = [
   {
     id: 1,
     Icon: FaLinkedinIn,
-    href: LINKEDIN_URL
+    href: 'https://www.linkedin.com/in/fatihbahadir/'
   },
   {
     id: 2,
     Icon: FaGithub,
-    href: GITHUB_URL
+    href: 'https://github.com/fatihbahadir'
   },
+]
+
+export const SOCIALS = [
+  ...HOME_SOCIALS,
   {
     id: 3,
     Icon: FaInstagram,

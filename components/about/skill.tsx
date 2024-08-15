@@ -8,7 +8,7 @@ const Skill = ({ data, description} : { data: string[], description: string}) =>
     </div>
     <div className='flex flex-wrap gap-3'>
       {data.map((item, index)=>(
-        <span key={index} className='px-4 lg:px-5 xl:px-6 break-words flex items-center justify-center text-white rounded-[100px] border-2 border-[#484848] text-[12px] lg:text-[14px] xl:text-[16px] font-bold leading-[100%] py-3 lg:py-4 xl:py-5'>
+        <span key={index} className='px-4 lg:px-5 xl:px-6 break-words flex-center text-white rounded-[100px] border-2 border-[#484848] text-[12px] lg:text-[14px] xl:text-[16px] font-bold leading-[100%] py-3 lg:py-4 xl:py-5'>
           {item}
           </span>
       ))}

@@ -1,9 +1,6 @@
 "use client";
 import { bebas_neue } from "@/lib/fonts";
 import React, { ReactNode, useRef } from "react";
-import Buttons from "@/components/buttons";
-import { FaDownload, FaExpand } from "react-icons/fa";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const AboutMain = ({
@@ -36,11 +33,11 @@ const AboutMain = ({
     ref={ref}
     >
       <section
-        className={`h-screen max-w-screen flex items-center justify-center ${
-          first && "-mt-[105px]"
+        className={`screen-container flex-center ${
+          !first && "mt-[0]"
         } relative`}
       >
-        <div className="flex lg:flex-row flex-col items-start w-full justify-between lg:justify-between gap-5 lg:gap-0">
+        <div className="flex-mobile items-start w-full justify-between lg:justify-between gap-5 lg:gap-0">
           <h2
             className={`${bebas_neue.className} uppercase ${
               first
@@ -51,7 +48,7 @@ const AboutMain = ({
             {title}
           </h2>
 
-          <div className={`flex flex-col ${gap} max-w-[600px] sm:max-w-full lg:max-w-[600px] xl:max-w-[700px] `}>
+          <div className={`flex-column ${gap} max-w-[600px] sm:max-w-full lg:max-w-[600px] xl:max-w-[700px] `}>
             {rightSection}
           </div>
 
@@ -59,7 +56,7 @@ const AboutMain = ({
         </div>
         {
           !last &&
-          <div className="absolute w-screen bottom-0 h-[1px] bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)]"></div>
+          <div className="absolute w-screen -bottom-[1px] h-[1px] bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)]"></div>
 
         }
       </section>

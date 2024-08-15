@@ -16,8 +16,8 @@ const Hero = () => {
   const router = useRouter()
 
   return (
-    <section className="max-w-screen h-screen flex lg:flex-row flex-col items-center lg:justify-between lg:-mt-[120px]  gap-6 lg:gap-0">
-      <div className="flex flex-col text-start justify-center">
+    <section className="screen-container flex-mobile justify-center pt-[75px] lg:pt-[0px] items-center lg:justify-between gap-6 lg:gap-0">
+      <div className="w-full flex-column text-start justify-center">
         <h1
           className={`${bebas_neue.className} lg:text-[90px] xl:text-[101px] text-6xl leading-[90%] `}
         >
@@ -49,7 +49,7 @@ const Hero = () => {
           />
       </div>
 
-      <div className="w-full h-[280px] sm:h-[500px] lg:w-[550px] lg:h-[530px] 2xl:w-[550px] 2xl:h-[570px]">
+      <div className="w-full h-[280px] sm:h-[400px] lg:w-[550px] lg:h-[530px] 2xl:w-[550px] 2xl:h-[570px]">
         <Image
           src="/home.JPG"
           width={400}

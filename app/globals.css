@@ -12,6 +12,33 @@
   scroll-behavior: smooth;
 }
 
+@layer components{
+  .screen-container {
+    @apply h-screen -mt-[93px] max-w-[100vw] ;
+  }
+  
+  .btn {
+    @apply bg-primary h-[40px] lg:h-[54px] px-6 pr-16 rounded-[100px] uppercase text-main-bg relative font-bold text-[13px] lg:text-[16px];
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-mobile {
+    @apply flex lg:flex-row flex-col;
+  }
+
+  .flex-column {
+    @apply flex flex-col;
+  }
+
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -28,7 +28,7 @@ export default function RootLayout({
           speed={200}
           shadow="0 0 10px #D3E97A,0 0 5px #D3E97A"
         />
-        <main className="flex flex-col mx-auto max-w-[61rem] xl:max-w-[77rem] 2xl:max-w-[82rem] justify-center px-4 pt-5 text-white">
+        <main className="flex-column mx-auto max-w-[61rem] xl:max-w-[77rem] 2xl:max-w-[82rem] justify-center px-4 text-white">
           {children}
         </main>
         <div id="modal"/>

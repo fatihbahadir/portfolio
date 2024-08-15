@@ -42,12 +42,12 @@ const Modal = ({
   return createPortal(
     <div
       onClick={handleBackdropClick}
-      className={`fixed left-0 top-0 flex h-screen w-screen items-center justify-center transition-all duration-300 bg-main-bg bg-opacity-60 z-[12] ${
+      className={`fixed left-0 top-0 flex-center h-screen w-screen transition-all duration-300 bg-main-bg bg-opacity-60 z-[12] ${
         active ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >
       <div
-        className={`relative w-[90%] sm:w-[78%] sm:h-[70%] lg:w-[520px] lg:h-[75%] flex flex-col items-center justify-center rounded-[10px] border border-[#484848] bg-main-bg p-[10px] transition-transform duration-300 ${
+        className={`relative w-[90%] sm:w-[78%] sm:h-[70%] lg:w-[520px] lg:h-[75%] flex-col-center rounded-[10px] border border-[#484848] bg-main-bg p-[10px] transition-transform duration-300 ${
           active ? "scale-100" : "scale-75"
         }`}
       >
