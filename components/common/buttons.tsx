@@ -27,7 +27,7 @@ const Buttons = ({
         </div>
       </button>
       {HOME_SOCIALS.map((social) => (
-        <a target="_blank" href={social.href}>
+        <a key={social.id} target="_blank" href={social.href}>
           <span className="w-[40px] h-[40px] lg:w-[54px] lg:h-[54px] rounded-full flex items-center justify-center bg-[#222222] cursor-pointer hover:scale-105 transition-all">
             <social.Icon className="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] text-primary" />
           </span>

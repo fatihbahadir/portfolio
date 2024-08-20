@@ -36,6 +36,7 @@ const Information = () => {
       <div className="mt-3 flex items-start justify-center gap-3 lg:gap-8">
         {SOCIALS.map((social, index) => (
           <SocialButton
+            key={social.id}
             id={social.id}
             href={social.href}
             Icon={social.Icon}
