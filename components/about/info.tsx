@@ -1,16 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import Buttons from "./buttons";
+import Buttons from "@/components/common/buttons";
 import { FaDownload, FaExpand } from "react-icons/fa";
-import Modal from "./modal";
+import Modal from "@/components/common/modal";
 import { handleCvDownload } from "@/lib/utils";
 
-const AboutMainRight = () => {
+const Information = () => {
   const [isActive, setIsActive] = useState(false);
 
-
-
-  
   const openModal = () => {
     setIsActive(true);
   };
@@ -50,16 +47,19 @@ const AboutMainRight = () => {
             src="./cvnew.pdf"
           />
         </div>
-        <div className="flex flex-col items-center justify-center text-off-white sm:hidden">
+        <div className="flex-col-center text-off-white sm:hidden">
           <p>
             Ooops! It seems your browser does not support pdf viewer. Please
             download it with the button below.
           </p>
           <button
             onClick={handleCvDownload}
-            className="flex items-center justify-center gap-3 bg-primary rounded-[30px] py-2 mt-3 px-3 text-black font-semibold cursor-pointer"
+            className="btn group"
           >
-            <FaDownload /> Download
+            Download
+            <div className="w-3 h-3 rounded-full absolute top-[50%] -translate-y-1/2 group-hover:scale-[300%] transition-all bg-main-bg right-5 flex-center">
+          <FaDownload className="hidden group-hover:block transition-all text-white group-hover:scale-50" />
+          </div>
           </button>
         </div>
       </Modal>
@@ -67,4 +67,4 @@ const AboutMainRight = () => {
   );
 };
 
-export default AboutMainRight;
+export default Information;

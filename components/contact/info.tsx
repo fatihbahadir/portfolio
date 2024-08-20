@@ -5,10 +5,11 @@ import { handleCvDownload } from '@/lib/utils';
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import SocialButton from '../common/socialButton';
 
-const ContactLeft = () => {
+const Information = () => {
   return (
-    <div className="flex items-start justify-center gap-2 lg:gap-5 flex-col">
+    <div className="flex-column items-start justify-center gap-2 lg:gap-5 ">
       <h2
         className={`${bebas_neue.className} uppercase  text-[57px] lg:text-[90px] xl:text-[101px] leading-[90%] `}
       >
@@ -34,22 +35,20 @@ const ContactLeft = () => {
       </p>
       <div className="mt-3 flex items-start justify-center gap-3 lg:gap-8">
         {SOCIALS.map((social, index) => (
-          <a
-            className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px] text-primary opacity-0"
-            href={social.href}
+          <SocialButton
             key={social.id}
-            target="_blank"
+            id={social.id}
+            href={social.href}
+            Icon={social.Icon}
             style={{
               animation: `fadeIn 0.8s ease-in-out forwards`,
               animationDelay: `${index * 0.2 + 0.65}s`,
             }}
-          >
-            <social.Icon className="w-full h-full  transition-all hover:scale-105" />
-          </a>
+          />
         ))}
       </div>
     </div>
   );
 };
 
-export default ContactLeft;
+export default Information;

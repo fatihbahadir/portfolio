@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import InputField from "./contactInputField";
+import InputField from "./inputField";
 import emailjs from "@emailjs/browser";
 import { FaCheck } from "react-icons/fa";
 
 
-const ContactForm: React.FC = () => {
+const Form: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="w-full">
       <form
-        className="w-full flex flex-col gap-2 lg:gap-4 pb-2"
+        className="w-full flex-column gap-2 lg:gap-4 pb-2"
         onSubmit={handleSubmit}
       >
         <InputField
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
         <button
           className={`${
             completed && "animate-bounce transition-all"
-          } self-start mt-1 sm:mt-3 bg-primary transition-all flex items-center justify-center w-[120px] h-[40px] uppercase text-[14px] lg:text-[16px] text-main-bg font-bold rounded-[100px]`}
+          } self-start mt-1 sm:mt-3 bg-primary transition-all flex-center w-[120px] h-[40px] uppercase text-[14px] lg:text-[16px] text-main-bg font-bold rounded-[100px]`}
           type="submit"
           disabled={loading || completed}
         >
@@ -162,7 +162,7 @@ const ContactForm: React.FC = () => {
               <div className="w-3 h-3 rounded-full animate-pulse bg-main-bg"></div>
             </div>
           ) : completed ? (
-            <div className="flex items-center justify-center gap-2 text-green-700 ">
+            <div className="flex-center gap-2 text-green-700 ">
               <FaCheck />
               Sent
             </div>
@@ -175,4 +175,4 @@ const ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;
+export default Form;

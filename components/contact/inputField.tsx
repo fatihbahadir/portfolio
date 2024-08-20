@@ -13,7 +13,7 @@ interface InputFieldProps {
 
 const ContactInputField: React.FC<InputFieldProps> = ({ id, name, type = 'text', value, onChange, error, label, disabled }) => {
   return (
-    <div className='flex flex-col gap-1 lg:gap-2 w-full text-[14px] lg:text-[16px] px-1'>
+    <div className='flex-column gap-1 lg:gap-2 w-full text-[14px] lg:text-[16px] px-1'>
       <label aria-disabled={disabled} className=' aria-disabled:opacity-50 text-[14px] lg:text-[16px] text-off-white' htmlFor={id}>{label}</label>
       {type === 'textarea' ? (
         <textarea

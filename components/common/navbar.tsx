@@ -53,7 +53,7 @@ const Navbar = () => {
       className={`${bebas_neue.className} sticky top-0 z-10 text-off-white ${scrolling && 'bg-main-bg lg:bg-transparent' } `}
     >
       <div className={`${scrolling && 'lg:absolute lg:inset-0 lg:bg-main-bg lg:bg-opacity-50 lg:backdrop-blur-lg lg:z-[-1]' }`}></div>
-      <div className="max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem] mx-auto px-4">
+      <div className="max-w-5xl xl:max-w-[81rem] 2xl:max-w-[86rem] mx-auto px-4">
         <div className="flex items-center justify-between py-6">
           <Link href={"/"}>
             <h2 className="text-3xl xl:text-4xl leading-[150%] hover:text-white transition-all">
@@ -105,7 +105,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-center space-y-8">
+          <div className="flex-col-center space-y-8">
             {NAV_ITEMS.map((item, index) => (
               <Link
                 key={index}

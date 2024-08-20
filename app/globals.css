@@ -1,14 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-@layer utilities {
-    .spotlight-bg {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%);
-      background-size: 400% 400%;
-      animation: spotlight 4s ease-in-out infinite;
-    }
-  } */
+
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -16,6 +10,33 @@
 
 * {
   scroll-behavior: smooth;
+}
+
+@layer components{
+  .screen-container {
+    @apply h-screen -mt-[93px] max-w-[100vw] ;
+  }
+  
+  .btn {
+    @apply bg-primary h-[40px] lg:h-[54px] px-6 pr-16 rounded-[100px] uppercase text-main-bg relative font-bold text-[13px] lg:text-[16px];
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .flex-mobile {
+    @apply flex lg:flex-row flex-col;
+  }
+
+  .flex-column {
+    @apply flex flex-col;
+  }
+
 }
 
 @keyframes fadeIn {

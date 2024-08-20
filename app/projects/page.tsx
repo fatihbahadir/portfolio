@@ -1,8 +1,16 @@
+import ProjectsMain from '@/components/projects/main';
+import { PROJECT_ITEMS } from '@/data/data'
 import React from 'react'
 
 const Projects = () => {
   return (
-    <div className='w-full h-screen -mt-[110px] flex items-center justify-center text-2xl lg:text-5xl animate-pulse'>Currently Building 🛠️</div>
+    <>
+      {
+        PROJECT_ITEMS.map((item, index)=>(
+          <ProjectsMain first={index === 0} key={item.id} {...item} />
+        ))
+      }
+    </>
   )
 }
 

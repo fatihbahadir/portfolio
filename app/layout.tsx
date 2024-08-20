@@ -1,37 +1,12 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/common/navbar";
 import { manrope } from "@/lib/fonts";
 import NextTopLoader from "nextjs-toploader";
+import { METADATA } from "@/data/data";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Fatih Bahadır - Portfolio",
-    template: "%s | Fatih Bahadır",
-  },
-  description: "Personal Website of Fatih Bahadır",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png", 
-    apple: "apple-touch-icon.png", 
-  },
-  openGraph: {
-    title: "Fatih Bahadır - Portfolio",
-    description: "Personal Website of Fatih Bahadır",
-    url: "https://www.f-bahadir.com", 
-    siteName: "Fatih Bahadır - Portfolio",
-    images: [
-      {
-        url: "https://www.f-bahadir.com/_next/image?url=%2Fhome.JPG&w=640&q=75", 
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
-  },
-};
+export const metadata: Metadata = METADATA
 
 export default function RootLayout({
   children,
@@ -53,7 +28,7 @@ export default function RootLayout({
           speed={200}
           shadow="0 0 10px #D3E97A,0 0 5px #D3E97A"
         />
-        <main className="flex flex-col mx-auto max-w-[61rem] xl:max-w-[77rem] 2xl:max-w-[93rem] justify-center px-4 pt-5 text-white">
+        <main className="flex-column mx-auto max-w-[61rem] xl:max-w-[77rem] 2xl:max-w-[82rem] justify-center px-4 text-white">
           {children}
         </main>
         <div id="modal"/>
