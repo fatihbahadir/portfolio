@@ -18,17 +18,23 @@ const ProjectsMain = ({Img, title, description, liveLink, githubLink,frontendGit
 
   return (
   <section
-
-  className={`h-screen flex-mobile items-start justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 ${first && "lg:-mt-[105px]"} py-12`}>
-      <div className="bg-[#1A1A1A] rounded-[12px] w-full h-[343px] lg:w-[450px] lg:h-[450px]  xl:w-[520px] xl:h-[520px] relative">
+  className={`screen-container flex-mobile items-start justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 ${!first ? "mt-[0]" : "pt-[65px] lg:pt-[0px"} `}>
+      <div className="bg-[#1A1A1A] rounded-[12px] w-full h-[343px] lg:w-[450px] lg:h-[450px]  xl:w-[520px] xl:h-[520px] hidden sm:block relative">
         <Image
-          className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-[300px]  h-[180px] sm:w-[500px] sm:h-[300px] md:w-[400px] md:h-[200px]  xl:w-[500px] xl:h-[260px] rounded-[12px]"
+          className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] sm:w-[430px] sm:h-[223px] md:w-[500px] md:h-[260px] lg:w-[430px] lg:h-[223px]  xl:w-[500px] xl:h-[260px] rounded-[12px]"
           src={Img}
           alt="live chat"
           width={500}
           height={260}
         />
       </div>
+      <Image
+          className="sm:hidden w-full h-[178px] rounded-[12px]"
+          src={Img}
+          alt="live chat"
+          width={500}
+          height={260}
+        />
       <div className="flex-colum items-start justify-start w-full lg:max-w-[400px] xl:max-w-[580px] gap-5">
         <h5 className="text-[20px] lg:text-2xl xl:text-3xl leading-[140%]">
         {title}
@@ -55,25 +61,25 @@ const ProjectsMain = ({Img, title, description, liveLink, githubLink,frontendGit
           {
             liveLink &&
             <a target="_blank" href={liveLink} className="flex text-[14px] lg:text-[16px] font-semibold items-center gap-2 text-primary relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary">
-            LIVE DEMO <BsArrowUpRight />
+            LIVE <BsArrowUpRight />
             </a>
           }
           {
             frontendGithubLink &&
             <a target="_blank" href={frontendGithubLink} className="flex text-[14px] lg:text-[16px]  font-semibold items-center gap-2 text-primary relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary ">
-            GITHUB (FRONTEND) <FaGithub />
+            FRONTEND <FaGithub />
           </a>
           }
           {
             backendGithubLink &&
             <a target="_blank" href={backendGithubLink} className="flex text-[14px] lg:text-[16px]  font-semibold items-center gap-2 text-primary relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary ">
-            GITHUB (BACKEND) <FaGithub />
+            BACKEND <FaGithub />
           </a>
           }
           {
             githubLink &&
             <a target="_blank" href={githubLink} className="flex text-[14px] lg:text-[16px]  font-semibold items-center gap-2 text-primary relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary ">
-            SEE ON GITHUB <FaGithub />
+            SEE CODE <FaGithub />
           </a>
           }
 
