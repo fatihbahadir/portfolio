@@ -8,9 +8,12 @@
     display: none;
 }
 
-* {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    @apply scroll-smooth;
+  } 
 }
+
 
 @layer components{
   .screen-container {

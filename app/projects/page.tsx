@@ -1,4 +1,4 @@
-import ProjectsMain from '@/components/projects/main';
+import ProjectsMain from '@/components/projects/index';
 import { PROJECT_ITEMS } from '@/data/data'
 import React from 'react'
 
@@ -7,7 +7,7 @@ const Projects = () => {
     <>
       {
         PROJECT_ITEMS.map((item, index)=>(
-          <ProjectsMain first={index === 0} key={item.id} {...item} />
+          <ProjectsMain last={index === PROJECT_ITEMS.length - 1} first={index === 0} key={item.id} {...item} />
         ))
       }
     </>
