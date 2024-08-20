@@ -1,7 +1,7 @@
-"use client";
 import { bebas_neue } from "@/lib/fonts";
-import React, { ReactNode, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { ReactNode } from "react";
+import MotionWrapper from "../common/motionWrapper";
+import Divider from "../common/divider";
 
 const AboutMain = ({
   title,
@@ -16,21 +16,10 @@ const AboutMain = ({
   first?: boolean;
   last?: boolean;
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.15 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
 
   return (
-    <motion.div
-    style={{
-      scale: !first ? scaleProgress : 1,
-      opacity: !first ? opacityProgress : 1,
-    }}
-    ref={ref}
+    <MotionWrapper
+    first={first}
     >
       <section
         className={`screen-container flex-center ${
@@ -52,15 +41,15 @@ const AboutMain = ({
             {rightSection}
           </div>
 
-          {last && <div className="absolute left-0 bottom-5 text-off-white text-[16px]">© {new Date().getFullYear()} Muhammet Fatih Bahadır</div>}
+
         </div>
         {
           !last &&
-          <div className="absolute w-screen -bottom-[1px] h-[1px] bg-gradient-to-r from-[rgba(211,233,122,0.1)] via-primary to-[rgba(211,233,122,0.1)]"></div>
+          <Divider/>
 
         }
       </section>
-    </motion.div>
+    </MotionWrapper>
   );
 };
 

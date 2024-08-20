@@ -6,6 +6,7 @@ import { manrope } from "@/lib/fonts";
 import NextTopLoader from "nextjs-toploader";
 import { METADATA } from "@/data/data";
 
+
 export const metadata: Metadata = METADATA
 
 export default function RootLayout({

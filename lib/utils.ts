@@ -1,9 +1,8 @@
 export const handleCvDownload = async (e?: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-    // Prevent default behavior if the function is triggered by an event
     if (e) e.preventDefault();
   
     try {
-      const response = await fetch('./cvnew.pdf'); // Update the path to your PDF file
+      const response = await fetch('./cvnew.pdf'); 
       if (!response.ok) throw new Error('Network response was not ok');
   
       const blob = await response.blob();
@@ -11,11 +10,10 @@ export const handleCvDownload = async (e?: React.MouseEvent<HTMLAnchorElement | 
   
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'cvnew.pdf'; // The name of the file to be downloaded
+      link.download = 'cvnew.pdf'; 
       document.body.appendChild(link);
       link.click();
   
-      // Clean up
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
     } catch (error) {
