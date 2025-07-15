@@ -2,7 +2,7 @@ import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 
-export const METADATA =  {
+export const METADATA = {
   title: {
     default: "Fatih Bahadır - Portfolio",
     template: "%s | Fatih Bahadır",
@@ -10,17 +10,17 @@ export const METADATA =  {
   description: "Personal Website of Fatih Bahadır",
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png", 
-    apple: "apple-touch-icon.png", 
+    shortcut: "/favicon-16x16.png",
+    apple: "apple-touch-icon.png",
   },
   openGraph: {
     title: "Fatih Bahadır - Portfolio",
     description: "Personal Website of Fatih Bahadır",
-    url: "https://www.f-bahadir.com", 
+    url: "https://www.f-bahadir.com",
     siteName: "Fatih Bahadır - Portfolio",
     images: [
       {
-        url: "https://www.f-bahadir.com/_next/image?url=%2Fhome.JPG&w=640&q=75", 
+        url: "https://www.f-bahadir.com/_next/image?url=%2Fhome.JPG&w=640&q=75",
         width: 1200,
         height: 630,
       },
@@ -32,30 +32,30 @@ export const METADATA =  {
 
 
 export const NAV_ITEMS = [
-    {
-        href: '/',
-        name: 'Home'  
-      },
-    {
-      href: '/about',
-      name: 'About'  
-    },
-    {
-        href: '/projects',
-        name: 'Projects'  
-    },
-    {
-        href: '/contact',
-        name: 'Contact'  
-    }
+  {
+    href: '/',
+    name: 'Home'
+  },
+  {
+    href: '/about',
+    name: 'About'
+  },
+  {
+    href: '/projects',
+    name: 'Projects'
+  },
+  {
+    href: '/contact',
+    name: 'Contact'
+  }
 ];
 
 export const EDUCATION = [
   {
     id: 1,
     title: 'Maltepe University - Software Engineering',
-    date: '2020 - Present',
-    description: 'I am a 4th-year student with a 3.38 GPA. Completed prep class and took various programming and software development courses.'
+    date: '2020 - 2025',
+    description: 'I graduated with a 3.42 GPA. Completed prep class and took various programming and software development courses.'
   },
   {
     id: 2,
@@ -66,18 +66,21 @@ export const EDUCATION = [
 ];
 
 export const EXPERINCE = [
+
   {
     id: 1,
-    title: 'Freelance Developer',
-    date: '2022 - Present',
-    description: 'Developed websites from simple HTML/CSS sites to complex web applications using React. Worked on various freelance projects.'
+    title: 'Full-Stack Developer',
+    firm: 'Fill-Labs',
+    date: 'January 2025 - Present',
+    description: 'Developing large-scale projects with Go (Fiber), Next.js, Ant Design, ShadcnUI, Tailwind and SASS. Building AI-powered applications and admin panels. Implementing clean architecture, SSR, and scalable application design.'
   },
   {
-    id: 2,
+   id: 2,
     title: 'Frontend Developer Intern',
     firm: 'JotForm',
     date: 'July 2024 - August 2024',
-    description: 'Completed an internship where I developed a live chat application for a no-code app builder using React, Redux, and Redux Saga. Also worked on side projects.'  },
+    description: 'Completed an internship where I developed a live chat application for a no-code app builder using React, Redux, and Redux Saga. Also worked on side projects.'
+  },
 ];
 
 
@@ -95,14 +98,14 @@ export const EXPERIENCE_ITEMS = [
       "C# .NET",
       "Selenium",
       "Tkinter",
-      "Vercel"
+      "Vercel",
     ]
   },
   {
     title: "Years of ex with",
     description: 'Extensive experience gained over the years with these technologies, allowing for efficient and robust development practices.',
     items: [
-      "Axios",
+      "Bootstrap",
       "Fetch API",
       "React Context",
       "React Router",
@@ -112,7 +115,6 @@ export const EXPERIENCE_ITEMS = [
       "GitHub",
       "ExpressJS",
       "Python",
-      "NextJS"
     ]
   },
   {
@@ -120,10 +122,17 @@ export const EXPERIENCE_ITEMS = [
     description: 'In-depth work and study with these technologies, enhancing both practical skills and theoretical understanding for comprehensive development.',
     items: [
       "React.js",
+      "Go",
+      "Go Fiber",
+      "NextJS",
+      "SASS",
+      "Zustand",
+      "Axios",
+      "Ant Design",
+      "ShadcnUI",
       "HTML5",
       "CSS3",
       "Tailwind",
-      "Bootstrap",
       "Styled Components",
       "Redux",
       "Redux Saga",
@@ -153,12 +162,12 @@ export const SOCIALS = [
   {
     id: 3,
     Icon: FaInstagram,
-    href: 'https://www.instagram.com/marksmanofplat/' 
+    href: 'https://www.instagram.com/marksmanofplat/'
   },
   {
     id: 4,
     Icon: FaXTwitter,
-    href: 'https://x.com/lodylol_' 
+    href: 'https://x.com/lodylol_'
   },
 ]
 
@@ -166,26 +175,35 @@ export const SOCIALS = [
 export const PROJECT_ITEMS = [
   {
     id: 1,
-    Img: "/project4.png",
-    title: "Design Editor",
-    description: "This is the design editor, which I consider my biggest project. You can design almost everything. With this editor, you can create, save and download designs like Canva. Currently, I am working on adding video editing features.",
-    liveLink: "https://design-editor-ten.vercel.app/",
-    githubLink: "https://github.com/fatihbahadir/design-editor",
-    year: '2023 - Present',
-    role: 'Frontend Developer'
+    Img: "/project6.png",
+    title: "Uygununubul",
+    description: `Personalized house recommendation system using Customized Weighted Distance and Regression algorithms, secure user authentication with JWT, dynamic and weighted property recommendations, web scraping for real estate data, and integration of machine learning models for price estimation and user preference-based suggestions.`,
+    liveLink: 'https://uygununubul.com',
+    year: '2024-Present',
+    role: 'System Architect & Frontend, ML Developer',
   },
   {
     id: 2,
+    Img: "/project4.png",
+    title: "Design Editor",
+    description: "This is the design editor. You can design almost everything. With this editor, you can create, save and download designs like Canva.",
+    liveLink: "https://design-editor-ten.vercel.app/",
+    githubLink: "https://github.com/fatihbahadir/design-editor",
+    year: '2023 - 2024',
+    role: 'Frontend Developer'
+  },
+  {
+    id: 3,
     Img: "/project5.png",
     title: "CyberSec Application",
-    description: "A cybersecurity application that includes a backend for handling data collected by keylogger and email collection scripts from victims’ computers. It supports authentication, authorization, and a frontend dashboard for managing and viewing collected data.",
+    description: "A cybersecurity application that includes a backend for handling data collected by keylogger and email collection scripts from victims' computers.",
     backendGithubLink: "https://github.com/fatihbahadir/cyber-security-backend",
     frontendGithubLink: "https://github.com/fatihbahadir/cyber-sec-frontend",
     year: '2024',
     role: 'Fullstack Developer'
   },
   {
-    id: 3,
+    id: 4,
     Img: "/project2.png",
     title: "Landing Page",
     description: "This is the landing page for our YouTube automation project. I developed the landing page, I added animations with AOS, integrated email connections using EmailJS, implemented language switching with i18n, and added dark mode.",
@@ -194,7 +212,7 @@ export const PROJECT_ITEMS = [
     role: 'Frontend Developer'
   },
   {
-    id: 4,
+    id: 5,
     Img: "/project3.png",
     title: "Thesis Management System",
     description: "It is a thesis management system for our SE307 class. I developed the whole front end. This dashboard allowed us to add and delete theses, filter them by any parameter, add university, institute, related topics and subjects.",
@@ -204,7 +222,7 @@ export const PROJECT_ITEMS = [
     role: 'Fullstack Developer'
   },
   {
-    id: 5,
+    id: 6,
     Img: "/project1.png",
     title: "Process Monitoring",
     description: "With my university friends, we built a system that automatically uploads videos to YouTube. I developed the dashboard. This dashboard allowed us to track uploaded videos with charts, manage accounts, add configurations, and monitor progress.",

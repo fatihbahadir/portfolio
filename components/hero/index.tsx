@@ -4,8 +4,6 @@ import { bebas_neue } from "@/lib/fonts";
 import Image from "next/image";
 import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
-import { FaArrowUpRightDots } from "react-icons/fa6";
 import Buttons from "@/components/common/buttons";
 import { useRouter } from 'next/navigation'
 import NProgress from "nprogress";
@@ -16,7 +14,7 @@ const Hero = () => {
   const router = useRouter()
 
   return (
-    <section className="screen-container flex-mobile justify-center items-center pt-[15px] sm:pt-[0] lg:justify-between gap-6 lg:gap-0">
+    <section className="screen-container flex-mobile justify-center items-center lg:justify-between gap-6 lg:gap-0">
       <div className="w-full flex-column text-start justify-center">
         <h1
           className={`${bebas_neue.className} lg:text-[90px] xl:text-[101px] text-6xl leading-[90%] `}
@@ -36,9 +34,8 @@ const Hero = () => {
             ))}
           </div>
         </h1>
-        <span className="mt-3 lg:mt-5 xl:w-[40rem] text-base lg:text-lg leading-[150%] text-[#C7C7C7] font-[300]">
-          An Istanbul-based software engineering student and front-end developer
-          passionate about solving problems.
+        <span className="mt-3 lg:mt-5 xl:w-[40rem] text-base lg:text-lg leading-[150%] max-w-[90%] text-[#C7C7C7] font-[300]">
+          An Istanbul-based software engineer passionate about solving problems.
         </span>
 
         <Buttons text="Contact Me" onClick={()=>{

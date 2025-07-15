@@ -21,7 +21,7 @@ const Information = ({
   role: string;
 }) => {
   return (
-    <div className="flex-colum items-start justify-start w-full lg:max-w-[400px] xl:max-w-[580px] gap-5">
+    <div className="flex-column items-start justify-start w-full lg:max-w-[400px] xl:max-w-[580px] gap-5">
       <h5 className="text-[20px] lg:text-2xl xl:text-3xl leading-[140%]">
         {title}
       </h5>
@@ -36,9 +36,9 @@ const Information = ({
           <p className="leading-[160%]">Year</p>
           <p className="text-off-white leading-[160%]">{year}</p>
         </div>
-        <div className="border-b border-b-[#484848] py-3 flex items-center justify-between">
+        <div className="border-b border-b-[#484848] py-3 flex items-center w-full justify-between">
           <p className="leading-[160%]">Role</p>
-          <p className="text-off-white leading-[160%]">{role}</p>
+          <p className="text-off-white leading-[160%] text-end">{role}</p>
         </div>
       </div>
 

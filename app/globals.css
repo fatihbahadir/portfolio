@@ -17,7 +17,7 @@
 
 @layer components{
   .screen-container {
-    @apply h-screen -mt-[93px] max-w-[100vw] ;
+    @apply min-h-[calc(100dvh-93px)] xl:min-h-[calc(100dvh-88px)] max-w-[100vw];
   }
   
   .btn {

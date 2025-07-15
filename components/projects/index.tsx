@@ -31,11 +31,9 @@ const ProjectsMain = ({
   return (
     <MotionWrapper first={first}>
       <section
-        className={`screen-container relative flex items-center justify-center ${
-          !first ? "mt-[0]" : "pt-[65px] lg:pt-[0px]"
-        } `}
+        className={`relative flex items-center justify-center screen-container`}
       >
-        <div className="h-full w-full flex-mobile items-center justify-center lg:items-center lg:justify-between gap-6 lg:gap-0">
+        <div className="h-full w-full flex-mobile items-center justify-center lg:items-center lg:justify-between gap-6 lg:gap-0 pb-6">
           <ImgCard Img={Img} />
           <Information
             title={title}
