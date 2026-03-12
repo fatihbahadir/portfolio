@@ -18,7 +18,7 @@ const Information = () => {
   return (
     <>
       <h5 className="text-[20px] lg:text-2xl xl:text-3xl font-[500] leading-[140%]">
-        I am a software engineer based in Istanbul, Currently Full-Stack Developer at Fill-Labs.
+        I am a software engineer based in Istanbul, Currently Software Developer at Insider One.
       </h5>
       <p className="text-[16px] lg:text-[17px] xl:text-lg text-off-white leading-[150%] font-light">
         When I was a child, I used to lose track of time

@@ -66,16 +66,22 @@ export const EDUCATION = [
 ];
 
 export const EXPERINCE = [
-
   {
     id: 1,
-    title: 'Full-Stack Developer',
-    firm: 'Fill-Labs',
-    date: 'January 2025 - Present',
-    description: 'Developing large-scale projects with Go (Fiber), Next.js, Ant Design, ShadcnUI, Tailwind and SASS. Building AI-powered applications and admin panels. Implementing clean architecture, SSR, and scalable application design.'
+    title: 'Software Developer',
+    firm: 'Insider One',
+    date: 'September 2025 - Present',
+    description: "Currently working as a software developer at Insider One, solving global partner's problems with JavaScript and Go, enhancing my skills in software development."
   },
   {
-   id: 2,
+    id: 2,
+    title: 'Full-Stack Developer',
+    firm: 'Fill-Labs',
+    date: 'January 2025 - September 2025',
+    description: 'Developed large-scale projects with Go (Fiber), Next.js, Ant Design, ShadcnUI, Tailwind and SASS. Built AI-powered applications and admin panels. Implemented clean architecture, SSR, and scalable application design.'
+  },
+  {
+   id: 3,
     title: 'Frontend Developer Intern',
     firm: 'JotForm',
     date: 'July 2024 - August 2024',
